@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "mode": "enforce",
+  "interface": "lab0",
+  "xdpMode": "generic",
+  "managementCidrs": ["127.0.0.1/32", "::1/128"],
+  "managementPort": 22,
+  "host": {"tcpPorts": [80, 443], "udpPorts": [53, 27015], "ipv6": true},
+  "rules": [
+    {"id":"blocked-source","name":"Örnek kaynak engeli","enabled":true,"priority":10,"action":"drop","protocol":"any","source":"192.0.2.200/32","destination":"any","sourcePort":"any","destinationPort":"any","minPacketBytes":0,"maxPacketBytes":0,"pps":0,"burst":0},
+    {"id":"https-syn-budget","name":"HTTPS SYN bütçesi","enabled":true,"priority":20,"action":"limit","protocol":"tcp","source":"any","destination":"any","sourcePort":"any","destinationPort":"443","minPacketBytes":0,"maxPacketBytes":0,"pps":150,"burst":200,"sourcePps":30,"sourceBurst":40,"tcpFlags":"syn"},
+    {"id":"udp-service-budget","name":"UDP servis bütçesi","enabled":true,"priority":30,"action":"limit","protocol":"udp","source":"any","destination":"any","sourcePort":"any","destinationPort":"27015","minPacketBytes":0,"maxPacketBytes":0,"pps":200,"burst":300,"sourcePps":10,"sourceBurst":20},
+    {"id":"scan-source-example","name":"Örnek tarama kaynağı","enabled":true,"priority":40,"action":"drop","protocol":"tcp","source":"198.51.100.77/32","destination":"any","sourcePort":"any","destinationPort":"1-1023","minPacketBytes":0,"maxPacketBytes":0,"pps":0,"burst":0},
+    {"id":"stateful-handoff","name":"Stateful katmana devret","enabled":true,"priority":100,"action":"pass","protocol":"any","source":"any","destination":"any","sourcePort":"any","destinationPort":"any","minPacketBytes":0,"maxPacketBytes":0,"pps":0,"burst":0}
+  ]
+}

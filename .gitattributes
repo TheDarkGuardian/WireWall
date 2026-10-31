@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.go text eol=lf
+*.py text eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.pdf binary
+*.pptx binary
+*.woff binary
+*.woff2 binary
+docs/third-party/** -text

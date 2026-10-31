@@ -1,0 +1,12 @@
+apiVersion: 1
+providers:
+  - name: WireWall
+    orgId: 1
+    folder: WireWall
+    type: file
+    disableDeletion: true
+    allowUiUpdates: true
+    updateIntervalSeconds: 30
+    options:
+      path: /var/lib/grafana/dashboards/wirewall
+      foldersFromFilesStructure: false

@@ -1,0 +1,28 @@
+[Unit]
+Description=WireWall read-only Prometheus exporter
+After=wirewall.service
+Requires=wirewall.service
+PartOf=wirewall.service
+
+[Service]
+Type=simple
+User=wirewall
+Group=wirewall
+WorkingDirectory=/opt/wirewall
+ExecStart=/opt/wirewall/bin/wirewall metrics --socket /run/wirewall/control.sock --listen 127.0.0.1:9878
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

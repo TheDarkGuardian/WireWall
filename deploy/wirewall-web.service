@@ -1,0 +1,32 @@
+[Unit]
+Description=WireWall unprivileged web panel
+After=wirewall.service
+Requires=wirewall.service
+
+[Service]
+Type=simple
+User=wirewall
+Group=wirewall
+WorkingDirectory=/opt/wirewall
+ExecStart=/opt/wirewall/bin/wirewall serve --backend remote --socket /run/wirewall/control.sock --data /var/lib/wirewall-web --listen 127.0.0.1:9876 --web /opt/wirewall/web/dist
+Restart=on-failure
+RestartSec=3
+StateDirectory=wirewall-web
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=yes
+CapabilityBoundingSet=
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+PrivateTmp=yes
+PrivateDevices=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+RestrictSUIDSGID=yes
+LockPersonality=yes
+ReadWritePaths=/var/lib/wirewall-web
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,40 @@
+[Unit]
+Description=WireWall privileged XDP firewall agent
+Documentation=file:/opt/wirewall/docs/LINUX.md
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=/etc/wirewall/policy.json
+ConditionPathExists=/opt/wirewall/bpf/wirewall_bpfel.o
+
+[Service]
+Type=simple
+User=root
+Group=wirewall
+WorkingDirectory=/opt/wirewall
+ExecStart=/opt/wirewall/bin/wirewall agent --policy /etc/wirewall/policy.json --object /opt/wirewall/bpf/wirewall_bpfel.o --data /var/lib/wirewall --socket /run/wirewall/control.sock --confirm-network-changes --resume-confirmed
+# The activation watchdog deliberately survives the main process and restores
+# the project table if an unconfirmed activation loses its management session.
+KillMode=process
+Restart=no
+TimeoutStopSec=15
+StateDirectory=wirewall
+StateDirectoryMode=0700
+RuntimeDirectory=wirewall
+RuntimeDirectoryMode=0750
+RuntimeDirectoryPreserve=yes
+UMask=0077
+NoNewPrivileges=yes
+CapabilityBoundingSet=CAP_BPF CAP_NET_ADMIN CAP_PERFMON CAP_SYS_RESOURCE
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ReadWritePaths=/var/lib/wirewall /run/wirewall
+RestrictAddressFamilies=AF_INET AF_INET6 AF_NETLINK AF_UNIX
+LockPersonality=yes
+
+[Install]
+WantedBy=multi-user.target

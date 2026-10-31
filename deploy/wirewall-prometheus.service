@@ -1,0 +1,28 @@
+[Unit]
+Description=WireWall Prometheus metrics history
+After=network.target wirewall-metrics.service
+Wants=wirewall-metrics.service
+
+[Service]
+Type=simple
+User=wirewall-prometheus
+Group=wirewall-prometheus
+ExecStart=/opt/wirewall-monitoring/prometheus/prometheus --config.file=/etc/wirewall-prometheus/prometheus.yml --storage.tsdb.path=/var/lib/wirewall-prometheus --storage.tsdb.retention.time=30d --storage.tsdb.retention.size=2GB --web.listen-address=127.0.0.1:9090
+Restart=on-failure
+RestartSec=3
+StateDirectory=wirewall-prometheus
+StateDirectoryMode=0700
+NoNewPrivileges=yes
+CapabilityBoundingSet=
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+PrivateTmp=yes
+PrivateDevices=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

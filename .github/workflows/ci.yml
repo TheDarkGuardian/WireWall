@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  go:
+    name: Go / ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: '1.27.x'
+      - run: go test -count=1 ./...
+      - run: go vet ./...
+      - run: python scripts/dev/test_bench_traffic.py
+
+  linux-build:
+    name: Linux BPF build and ABI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: '1.27.x'
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y clang llvm gcc libbpf-dev linux-libc-dev
+      - run: bash scripts/linux/build.sh
+      - run: go test -count=1 ./internal/dataplane -run TestCompiledObjectABI
+        env:
+          WIREWALL_BPF_OBJECT: ${{ github.workspace }}/bpf/wirewall_bpfel.o
+      - name: ARM64 Go cross-build (not a kernel test)
+        run: GOOS=linux GOARCH=arm64 CGO_ENABLED=0 go build -o bin/wirewall-arm64 ./cmd/wirewall
+
+  web:
+    name: Web build and synthetic E2E
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: '1.27.x'
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm --prefix web ci
+      - run: npm --prefix web run build
+      - run: npm exec playwright install --with-deps chromium
+        working-directory: web
+      - run: python3 scripts/dev/run_e2e.py

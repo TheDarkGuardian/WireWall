@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "mode": "observe",
+  "interface": "ens3",
+  "xdpMode": "generic",
+  "managementCidrs": ["192.0.2.10/32"],
+  "managementPort": 22,
+  "host": {"tcpPorts": [80, 443], "udpPorts": [], "ipv6": true},
+  "rules": [
+    {
+      "id": "https-syn-budget", "name": "HTTPS SYN başlangıç bütçesi", "enabled": true,
+      "priority": 10, "action": "limit", "protocol": "tcp", "source": "any", "destination": "any",
+      "sourcePort": "any", "destinationPort": "443", "minPacketBytes": 0, "maxPacketBytes": 0,
+      "pps": 2000, "burst": 4000, "sourcePps": 20, "sourceBurst": 40, "tcpFlags": "syn"
+    }
+  ]
+}

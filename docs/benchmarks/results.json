@@ -1,0 +1,777 @@
+{
+  "benchmarkRuns": 120,
+  "groups": [
+    {
+      "configuration": "matrix/payload-1400-rules-1",
+      "payloadBytes": 1400,
+      "ruleCount": 1,
+      "mode": "baseline",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 1,
+      "p95Milliseconds": {
+        "median": 0.061957,
+        "min": 0.060364,
+        "max": 0.06353
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9486740693048,
+        "min": 499.9037081477006,
+        "max": 499.98425139621366
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.042539159903,
+        "min": 4999.023285755421,
+        "max": 4999.086781753793
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.0436600092893635,
+        "min": 1.8596001859600186,
+        "max": 2.8110599078341014
+      }
+    },
+    {
+      "configuration": "matrix/payload-1400-rules-1",
+      "payloadBytes": 1400,
+      "ruleCount": 1,
+      "mode": "nft",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.068289,
+        "min": 0.065494,
+        "max": 0.07464
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9433923099925,
+        "min": 499.9220783448219,
+        "max": 499.98953391849096
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.033968386077,
+        "min": 4998.980403377587,
+        "max": 4999.09535593064
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.169898430286242,
+        "min": 1.3011152416356877,
+        "max": 2.388608176389527
+      }
+    },
+    {
+      "configuration": "matrix/payload-1400-rules-1",
+      "payloadBytes": 1400,
+      "ruleCount": 1,
+      "mode": "generic",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.072296,
+        "min": 0.069332,
+        "max": 0.074229
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.91448972616456,
+        "min": 499.90657675920926,
+        "max": 499.94735654224206
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.065767592093,
+        "min": 4998.944931465755,
+        "max": 4999.09310451544
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.1286441462285977,
+        "min": 1.632462686567164,
+        "max": 2.533394748963611
+      }
+    },
+    {
+      "configuration": "matrix/payload-1400-rules-1",
+      "payloadBytes": 1400,
+      "ruleCount": 1,
+      "mode": "native",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.073439,
+        "min": 0.072367,
+        "max": 0.075362
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9672688434937,
+        "min": 499.93940974271663,
+        "max": 499.98881915062987
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.072727712325,
+        "min": 4998.994145899373,
+        "max": 4999.096854771766
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.399630826026765,
+        "min": 1.3992537313432836,
+        "max": 2.6231017027151404
+      }
+    },
+    {
+      "configuration": "matrix/payload-512-rules-1",
+      "payloadBytes": 512,
+      "ruleCount": 1,
+      "mode": "baseline",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 1,
+      "p95Milliseconds": {
+        "median": 0.060626,
+        "min": 0.059,
+        "max": 0.061287
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9983828057804,
+        "min": 499.8985275967842,
+        "max": 499.9989693016106
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.983828057804,
+        "min": 4998.985275967842,
+        "max": 4999.989693016106
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.4559777571825765,
+        "min": 1.7690875232774674,
+        "max": 2.7688047992616522
+      }
+    },
+    {
+      "configuration": "matrix/payload-512-rules-1",
+      "payloadBytes": 512,
+      "ruleCount": 1,
+      "mode": "nft",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.071595,
+        "min": 0.066165,
+        "max": 0.07456
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.96603150787814,
+        "min": 499.8982571080682,
+        "max": 499.9889394445067
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.060355840972,
+        "min": 4998.982571080682,
+        "max": 4999.120916588875
+      },
+      "sharedHostBusyPercent": {
+        "median": 1.6203703703703705,
+        "min": 1.254646840148699,
+        "max": 2.169898430286242
+      }
+    },
+    {
+      "configuration": "matrix/payload-512-rules-1",
+      "payloadBytes": 512,
+      "ruleCount": 1,
+      "mode": "generic",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.071775,
+        "min": 0.069962,
+        "max": 0.076363
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9430013990517,
+        "min": 499.90744643498863,
+        "max": 499.9912353531998
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.095077190141,
+        "min": 4999.030059589398,
+        "max": 4999.126397654088
+      },
+      "sharedHostBusyPercent": {
+        "median": 1.5836050302748022,
+        "min": 1.2143858010275572,
+        "max": 2.444649446494465
+      }
+    },
+    {
+      "configuration": "matrix/payload-512-rules-1",
+      "payloadBytes": 512,
+      "ruleCount": 1,
+      "mode": "native",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.07321,
+        "min": 0.070292,
+        "max": 0.077035
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.92205165474536,
+        "min": 499.9076490609381,
+        "max": 499.97103867768203
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.040096096245,
+        "min": 4998.962121957954,
+        "max": 4999.110421530407
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.039870190078813,
+        "min": 1.3999066728884741,
+        "max": 2.7126436781609193
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-1",
+      "payloadBytes": 64,
+      "ruleCount": 1,
+      "mode": "baseline",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 1,
+      "p95Milliseconds": {
+        "median": 0.058751,
+        "min": 0.057458,
+        "max": 0.061175
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9714912266049,
+        "min": 499.9109496621519,
+        "max": 499.99878210370457
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.109496621519,
+        "min": 4998.9878234728385,
+        "max": 4999.125883867073
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.2706209453197403,
+        "min": 2.1809744779582365,
+        "max": 2.6340110905730127
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-1",
+      "payloadBytes": 64,
+      "ruleCount": 1,
+      "mode": "nft",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.068869,
+        "min": 0.063099,
+        "max": 0.075182
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9228706996759,
+        "min": 499.8995227945422,
+        "max": 499.95856623381894
+      },
+      "offeredBackgroundPPS": {
+        "median": 4998.995227945422,
+        "min": 4998.953629154692,
+        "max": 4999.073806491366
+      },
+      "sharedHostBusyPercent": {
+        "median": 1.3029315960912051,
+        "min": 1.1173184357541899,
+        "max": 2.525252525252525
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-1",
+      "payloadBytes": 64,
+      "ruleCount": 1,
+      "mode": "generic",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.072758,
+        "min": 0.069211,
+        "max": 0.073358
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.92640893368156,
+        "min": 499.90343955166986,
+        "max": 499.9814340899467
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.034395516698,
+        "min": 4998.973149854582,
+        "max": 4999.118065301304
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.2253129346314324,
+        "min": 1.3078000934142924,
+        "max": 2.444649446494465
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-1",
+      "payloadBytes": 64,
+      "ruleCount": 1,
+      "mode": "native",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.073889,
+        "min": 0.065955,
+        "max": 0.075443
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9390607271172,
+        "min": 499.92415190786505,
+        "max": 499.99878870296607
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.041549417888,
+        "min": 4998.946320784438,
+        "max": 4999.987887029661
+      },
+      "sharedHostBusyPercent": {
+        "median": 1.720130172013017,
+        "min": 1.2172284644194757,
+        "max": 2.1739130434782608
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-16",
+      "payloadBytes": 64,
+      "ruleCount": 16,
+      "mode": "baseline",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 1,
+      "p95Milliseconds": {
+        "median": 0.062208,
+        "min": 0.05867,
+        "max": 0.064251
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9308727587519,
+        "min": 499.90183477607707,
+        "max": 499.9975092120102
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.053057482688,
+        "min": 4998.943708890088,
+        "max": 4999.975092120102
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.2716736207695876,
+        "min": 2.0891364902506964,
+        "max": 2.497687326549491
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-16",
+      "payloadBytes": 64,
+      "ruleCount": 16,
+      "mode": "nft",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.072737,
+        "min": 0.070173,
+        "max": 0.075663
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9477331642705,
+        "min": 499.89977019563145,
+        "max": 499.9986944026645
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.050363420669,
+        "min": 4998.997701956314,
+        "max": 4999.986944026645
+      },
+      "sharedHostBusyPercent": {
+        "median": 1.1644154634373545,
+        "min": 1.0256410256410255,
+        "max": 2.029520295202952
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-16",
+      "payloadBytes": 64,
+      "ruleCount": 16,
+      "mode": "generic",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.070053,
+        "min": 0.067959,
+        "max": 0.071906
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.92786690742963,
+        "min": 499.89771932726217,
+        "max": 499.9675109121287
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.0751481081925,
+        "min": 4998.977193272622,
+        "max": 4999.120153856693
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.22325150532654,
+        "min": 1.5850815850815851,
+        "max": 2.3126734505087883
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-16",
+      "payloadBytes": 64,
+      "ruleCount": 16,
+      "mode": "native",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.074119,
+        "min": 0.070222,
+        "max": 0.076023
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.96923959338307,
+        "min": 499.90723931287516,
+        "max": 499.99989200007406
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.072393128751,
+        "min": 4998.998920216741,
+        "max": 4999.112799459265
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.1779425393883227,
+        "min": 1.353874883286648,
+        "max": 2.5392428439519854
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-64",
+      "payloadBytes": 64,
+      "ruleCount": 64,
+      "mode": "baseline",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 1,
+      "p95Milliseconds": {
+        "median": 0.064162,
+        "min": 0.060555,
+        "max": 0.065734
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9189489407662,
+        "min": 499.89392700837493,
+        "max": 499.9969932184112
+      },
+      "offeredBackgroundPPS": {
+        "median": 4998.989521828085,
+        "min": 4998.93927008375,
+        "max": 4999.969932184112
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.1365536460752437,
+        "min": 1.8639328984156571,
+        "max": 2.4040684234858993
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-64",
+      "payloadBytes": 64,
+      "ruleCount": 64,
+      "mode": "nft",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.070203,
+        "min": 0.066095,
+        "max": 0.074229
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9541094128738,
+        "min": 499.94098476641506,
+        "max": 499.9796900257234
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.005298538024,
+        "min": 4998.941149197442,
+        "max": 4999.048037110852
+      },
+      "sharedHostBusyPercent": {
+        "median": 1.531322505800464,
+        "min": 1.1622501162250116,
+        "max": 2.3502304147465436
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-64",
+      "payloadBytes": 64,
+      "ruleCount": 64,
+      "mode": "generic",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.073589,
+        "min": 0.070685,
+        "max": 0.07447
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.96857867375326,
+        "min": 499.90737956024253,
+        "max": 499.97935715173503
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.04743918927,
+        "min": 4998.965217606218,
+        "max": 4999.085824443124
+      },
+      "sharedHostBusyPercent": {
+        "median": 1.5813953488372092,
+        "min": 1.1220196353436185,
+        "max": 2.531063046479521
+      }
+    },
+    {
+      "configuration": "matrix/payload-64-rules-64",
+      "payloadBytes": 64,
+      "ruleCount": 64,
+      "mode": "native",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.076214,
+        "min": 0.070203,
+        "max": 0.081492
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.99339278729184,
+        "min": 499.9127854141383,
+        "max": 499.9955861389409
+      },
+      "offeredBackgroundPPS": {
+        "median": 4998.981980398321,
+        "min": 4998.933941087344,
+        "max": 4999.137258836537
+      },
+      "sharedHostBusyPercent": {
+        "median": 1.7649790989317231,
+        "min": 1.262272089761571,
+        "max": 2.4491682070240297
+      }
+    },
+    {
+      "configuration": "final-core",
+      "payloadBytes": 64,
+      "ruleCount": 1,
+      "mode": "baseline",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 1,
+      "p95Milliseconds": {
+        "median": 0.057316,
+        "min": 0.054814,
+        "max": 0.057708
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.94811538458225,
+        "min": 499.9174750229919,
+        "max": 499.9810798159726
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.081195353515,
+        "min": 4998.97478323991,
+        "max": 4999.101338688737
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.226345083487941,
+        "min": 2.132591562355123,
+        "max": 2.5462962962962963
+      }
+    },
+    {
+      "configuration": "final-core",
+      "payloadBytes": 64,
+      "ruleCount": 1,
+      "mode": "nft",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.064611,
+        "min": 0.06372,
+        "max": 0.067969
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9398259427085,
+        "min": 499.90279030312763,
+        "max": 499.96416176894064
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.041660695284,
+        "min": 4998.998307566331,
+        "max": 4999.134258292034
+      },
+      "sharedHostBusyPercent": {
+        "median": 1.7113783533765032,
+        "min": 1.1633317822242903,
+        "max": 3.0847145488029466
+      }
+    },
+    {
+      "configuration": "final-core",
+      "payloadBytes": 64,
+      "ruleCount": 1,
+      "mode": "generic",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.064282,
+        "min": 0.062329,
+        "max": 0.067416
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9421444952901,
+        "min": 499.92340343586494,
+        "max": 499.9885627616273
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.021491237305,
+        "min": 4998.98856471045,
+        "max": 4999.085645915854
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.1296296296296298,
+        "min": 1.2599160055996268,
+        "max": 2.353484079372404
+      }
+    },
+    {
+      "configuration": "final-core",
+      "payloadBytes": 64,
+      "ruleCount": 1,
+      "mode": "native",
+      "repetitions": 5,
+      "legitimateSuccessRatio": 1,
+      "backgroundSuccessRatio": 0,
+      "p95Milliseconds": {
+        "median": 0.066835,
+        "min": 0.06366,
+        "max": 0.070002
+      },
+      "offeredLegitimatePPS": {
+        "median": 499.9500668871298,
+        "min": 499.89605001569157,
+        "max": 499.9658287355107
+      },
+      "offeredBackgroundPPS": {
+        "median": 4999.058328360624,
+        "min": 4998.960500156915,
+        "max": 4999.106345752141
+      },
+      "sharedHostBusyPercent": {
+        "median": 2.269569245020843,
+        "min": 1.9944341372912802,
+        "max": 2.8033088235294117
+      }
+    }
+  ],
+  "soak": {
+    "passed": true,
+    "rounds": 10,
+    "elapsedSeconds": 303.90452056599315,
+    "mode": "native",
+    "rules": 64,
+    "payloadBytes": 512,
+    "scope": "One persistent firewall instance in disposable namespaces; no host uplink traffic or exclusive CPU claim",
+    "results": [
+      {
+        "round": 1,
+        "received": 163907,
+        "dropped": 149001,
+        "eventDrops": 0
+      },
+      {
+        "round": 2,
+        "received": 326754,
+        "dropped": 297041,
+        "eventDrops": 0
+      },
+      {
+        "round": 3,
+        "received": 495008,
+        "dropped": 449997,
+        "eventDrops": 0
+      },
+      {
+        "round": 4,
+        "received": 657965,
+        "dropped": 598137,
+        "eventDrops": 0
+      },
+      {
+        "round": 5,
+        "received": 825007,
+        "dropped": 749990,
+        "eventDrops": 0
+      },
+      {
+        "round": 6,
+        "received": 989132,
+        "dropped": 899192,
+        "eventDrops": 0
+      },
+      {
+        "round": 7,
+        "received": 1152014,
+        "dropped": 1047265,
+        "eventDrops": 0
+      },
+      {
+        "round": 8,
+        "received": 1320009,
+        "dropped": 1199986,
+        "eventDrops": 0
+      },
+      {
+        "round": 9,
+        "received": 1483221,
+        "dropped": 1348358,
+        "eventDrops": 0
+      },
+      {
+        "round": 10,
+        "received": 1650013,
+        "dropped": 1499985,
+        "eventDrops": 0
+      }
+    ],
+    "legitimateSent": 150000,
+    "legitimateReceived": 150000,
+    "backgroundSent": 1499982,
+    "backgroundReceived": 0
+  },
+  "scope": "2026-10-30, Ubuntu22.04.5/Linux5.15, KVM4vCPU, isolated netns/veth. No physical NIC capacity claim. Primary100runs before nft JSON compatibility fix; final20runs after it. Observability Go additions followed; BPF object unchanged."
+}
