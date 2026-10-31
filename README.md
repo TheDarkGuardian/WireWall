@@ -233,5 +233,7 @@ VDS içindeki firewall sağlayıcının dolmuş upstream hattını açamaz. Nati
 - [Test yöntemi ve sonuçlar](docs/TESTING.md)
 - [Bağımlılık sürümleri ve üçüncü taraf bildirimleri](docs/DEPENDENCIES.md)
 - [Düzenlenebilir final sunumu](docs/presentation/WireWall-Final.pptx) ve [PDF görünümü](docs/presentation/WireWall-Final.pdf)
+- [Türkçe proje raporu](docs/presentation/WireWall-Proje-Raporu.pdf)
+- [Sunumda ve araştırmada kullanılan kaynaklar](docs/presentation/WireWall-Kaynaklar.md)
 
 WireWall uygulaması için genel kaynak lisansı henüz seçilmedi. BPF kaynaklarının SPDX bildirimi ve üçüncü taraf bileşenlerin kendi lisansları korunur. Grafana, Prometheus, Go SDK ve node_modules bu depoda dağıtılmaz. Özel anahtarlar, canlı state, operatör notları ve VDS bağlantı bilgileri kaynak deponun parçası değildir.
