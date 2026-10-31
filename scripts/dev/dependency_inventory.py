@@ -44,7 +44,7 @@ def main():
     (DEST/'inventory.json').write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding='utf-8')
     lines = ['# Bağımlılık ve lisans envanteri', '',
              'Go sürümleri go.mod/go.sum; npm sürümleri package-lock.json üzerinden kaydedilir. Kurulu paketlerin üst dizin lisans/NOTICE dosyaları third-party altında aynen korunur. Bu liste hukuki uygunluk sertifikası değildir; yayımlamadan önce dağıtılan bileşenlerin bildirimleri incelenir.', '',
-             'WireWall uygulaması için ayrı bir açık kaynak lisansı henüz seçilmedi. BPF kaynak başlıkları kendi SPDX bildirimlerini taşır. Grafana ve Prometheus kaynak pakete gömülmez, kendi paketleri/lisanslarıyla ayrıca kurulur.', '',
+             'WireWall’ın özgün kaynak kodu [MIT lisansı](../LICENSE) ile yayımlanır. BPF kaynakları `GPL-2.0-only OR MIT` çift lisans bildirimini taşır. Üçüncü taraf bileşenler kendi lisanslarına tabidir. Grafana ve Prometheus kaynak pakete gömülmez, kendi paketleri/lisanslarıyla ayrıca kurulur.', '',
              '## Go', '', '| Modül | Sürüm | Bildirim |', '|---|---|---|']
     for value in modules:
         refs = ', '.join(f'[dosya]({path})' for path in value['notices']) or 'Kurulu modülde üst dizin bildirimi bulunamadı'

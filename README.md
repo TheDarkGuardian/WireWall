@@ -236,4 +236,4 @@ VDS içindeki firewall sağlayıcının dolmuş upstream hattını açamaz. Nati
 - [Türkçe proje raporu](docs/presentation/WireWall-Proje-Raporu.pdf)
 - [Sunumda ve araştırmada kullanılan kaynaklar](docs/presentation/WireWall-Kaynaklar.md)
 
-WireWall uygulaması için genel kaynak lisansı henüz seçilmedi. BPF kaynaklarının SPDX bildirimi ve üçüncü taraf bileşenlerin kendi lisansları korunur. Grafana, Prometheus, Go SDK ve node_modules bu depoda dağıtılmaz. Özel anahtarlar, canlı state, operatör notları ve VDS bağlantı bilgileri kaynak deponun parçası değildir.
+WireWall’ın özgün kaynak kodu [MIT lisansı](LICENSE) ile yayımlanır. BPF kaynaklarındaki `GPL-2.0-only OR MIT` çift lisans bildirimi ve üçüncü taraf bileşenlerin kendi lisansları korunur. Grafana, Prometheus, Go SDK ve node_modules bu depoda dağıtılmaz. Özel anahtarlar, canlı state, operatör notları ve VDS bağlantı bilgileri kaynak deponun parçası değildir.
